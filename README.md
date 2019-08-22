@@ -51,8 +51,14 @@ GO enrichment anlysis using clusterProfiler enrichGO
 ```r
 ego <- enrichGO(rap_id,
         OrgDb = org,
-         eyType = "RAP",
+        keyType = "RAP",
         ont="BP")
 ```
 
 For more information about clusterProfiler, please go to <https://guangchuangyu.github.io/software/clusterProfiler/documentation/>
+
+## Citation
+
+If you use the org.Osativa.eg.db in your project, it is very nice for you to cite it 
+
+xuzhougeng. (2019, August 22). xuzhougeng/org.Osativa.eg.db v0.01 (Version v0.01). Zenodo. http://doi.org/10.5281/zenodo.3374105
