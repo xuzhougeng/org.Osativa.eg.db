@@ -30,7 +30,7 @@ library(org.Osativa.eg.db)
 org <-org.Osativa.eg.db
 ```
 
-Convert RAP-DB ID to MSU LOC-ID
+Convert RAP-DB ID to MSU LOC-ID: Os03g0831400 -> LOC_Os03g61590
 
 ```r
 # rap_id: RPA-DB ID
@@ -38,7 +38,7 @@ map_id <- AnnotationDbi::select(org, keys = rap_id,
                                 columns=c("GID"), keytype = "RAP")
 ```
 
-Convert MSU LOC-ID to RAP-DB ID
+Convert MSU LOC-ID to RAP-DB ID: LOC_Os03g61590 -> Os03g0831400
 
 ```r
 # msu_id: MSU ID
