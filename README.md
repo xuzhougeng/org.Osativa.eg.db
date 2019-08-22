@@ -55,4 +55,4 @@ ego <- enrichGO(rap_id,
         ont="BP")
 ```
 
-For more information about clusterProfierl, please go to <https://guangchuangyu.github.io/software/clusterProfiler/documentation/>
+For more information about clusterProfiler, please go to <https://guangchuangyu.github.io/software/clusterProfiler/documentation/>
