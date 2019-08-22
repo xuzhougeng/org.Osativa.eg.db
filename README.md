@@ -20,3 +20,39 @@ install.packages("https://github.com/xuzhougeng/org.Osativa.eg.db/releases/downl
     repos = NULL, 
     type="source")
 ```
+
+## Usage
+
+Load the packages
+
+```r
+library(org.Osativa.eg.db)
+org <-org.Osativa.eg.db
+```
+
+Convert RAP-DB ID to MSU LOC-ID
+
+```r
+# rap_id: RPA-DB ID
+map_id <- AnnotationDbi::select(org, keys = rap_id, 
+                                columns=c("GID"), keytype = "RAP")
+```
+
+Convert MSU LOC-ID to RAP-DB ID
+
+```r
+# msu_id: MSU ID
+map_id <- AnnotationDbi::select(org, keys = rap_id, 
+                                columns=c("RAP"), keytype = "GID")       
+```
+
+GO enrichment anlysis using clusterProfiler enrichGO
+
+```r
+ego <- enrichGO(rap_id,
+        OrgDb = org,
+         eyType = "RAP",
+        ont="BP")
+```
+
+For more information about clusterProfierl, please go to <https://guangchuangyu.github.io/software/clusterProfiler/documentation/>
